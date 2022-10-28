@@ -3,7 +3,9 @@ import Body from "./components/Body";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  height: 100vh;
+`;
 const BodyBox = styled.div`
   display: flex;
   width: 100%;

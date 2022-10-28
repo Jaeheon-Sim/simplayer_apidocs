@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       <Head>
-        <HeadTab>Sim Player</HeadTab>
+        <HeadTab>Sim Player Docs</HeadTab>
       </Head>
     </>
   );
