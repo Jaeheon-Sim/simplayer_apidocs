@@ -27,7 +27,6 @@ export default function API() {
       </TitleTab>
       <ContentBox></ContentBox>
       <Table>
-        {" "}
         <table border="1">
           <th>대분류</th>
           <th>소분류</th>
