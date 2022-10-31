@@ -8,9 +8,9 @@ const Div = styled.div`
 
 const Head = styled(Div)`
   height: 60px;
-  background-color: black;
+
   color: white;
-  box-shadow: 0 1px 3px 1px;
+  box-shadow: 0 1px 1px 0px;
   justify-content: flex-start;
 `;
 

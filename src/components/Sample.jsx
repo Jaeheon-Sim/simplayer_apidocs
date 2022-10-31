@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 const Div = styled.div``;
 
-const Wrapper = styled(Div)``;
+const Wrapper = styled(Div)`
+   ;
+`;
 
 const Title = styled.h1`
+  font-size: 50px;
   padding: 0 10px 1px 5px;
   border-bottom: 1.5px solid rgb(183, 185, 187);
 `;
@@ -13,19 +16,56 @@ const TitleTab = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
-const ContentBox = styled.div``;
+const ContentBox = styled.div`
+  width: auto;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  /* clear: both;
+  float: left; */
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+`;
 
+const MethodBox = styled.div`
+  border: 1px solid white;
+  width: 70%;
+  padding: 20px;
+  border-radius: 20px;
+`;
+
+const APITitle = styled.h2``;
+
+const APIExplain = styled.p``;
+const APIHttp = styled.h3`
+  color: #eaf700aa;
+  margin-right: 20px;
+`;
 const Table = styled.table`
   color: white;
 `;
-
+const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
 export default function API() {
   return (
     <Wrapper>
       <TitleTab>
         <Title>API</Title>
       </TitleTab>
-      <ContentBox></ContentBox>
+      <MethodBox>
+        <APITitle>강의 평점 등록</APITitle>
+        <APIExplain>강의의 평점을 등록합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/front/course/{"{courseId}"}/rating</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+      {/* // 메소드 박스에 내용을 적어 // 내가 적은 내용만 일단 적어 코드 부분은
+      contentbox인데 어떻게 적어야할지 몰라서 일단 저렇게 나둬놓을게 */}
       <Table>
         <table border="1">
           <th>대분류</th>

@@ -13,12 +13,9 @@ const NavBar = styled(Div)`
   width: 125px;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #060606 0%,
-    #333333 34.48%,
-    #000000 100%
-  );
+  border-right: 1px solid black;
+  flex-shrink: 0;
+  font-weight: bolder;
 `;
 
 const NavTab = styled(Div)`

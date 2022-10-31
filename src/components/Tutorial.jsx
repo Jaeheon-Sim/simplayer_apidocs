@@ -5,6 +5,7 @@ const Div = styled.div``;
 const Wrapper = styled(Div)``;
 
 const Title = styled.h1`
+  font-size: 50px;
   padding: 0 10px 1px 5px;
   border-bottom: 1.5px solid rgb(183, 185, 187);
 `;
@@ -13,7 +14,16 @@ const TitleTab = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
-const ContentBox = styled.div``;
+const ContentBox = styled.div`
+  width: auto;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  /* clear: both;
+  float: left; */
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+`;
 
 export default function Tutorial() {
   return (
@@ -21,9 +31,9 @@ export default function Tutorial() {
       <TitleTab>
         <Title>Tutorial</Title>
       </TitleTab>
-      <ContentBox>
+      <div>
         Sim Player는 사용자 편의성과 보안성이 강화된 웹 미디어 플레이어입니다.
-      </ContentBox>
+      </div>
       <div>다양한 플랫폼에서 사용 가능하도록 API를 제공합니다.</div>
       <br />
       <br />
