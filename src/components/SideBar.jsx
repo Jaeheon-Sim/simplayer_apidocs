@@ -9,6 +9,7 @@ const Div = styled.div`
 `;
 
 const NavBar = styled(Div)`
+  position: fixed;
   margin-top: 2px;
   width: 125px;
   flex-direction: column;

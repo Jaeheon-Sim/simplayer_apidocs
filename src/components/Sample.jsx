@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 const Div = styled.div``;
 
-const Wrapper = styled(Div)`
-   ;
-`;
+const Wrapper = styled(Div)``;
 
 const Title = styled.h1`
   font-size: 50px;
@@ -28,8 +26,9 @@ const ContentBox = styled.div`
 `;
 
 const MethodBox = styled.div`
+  margin-bottom: 25px;
   border: 1px solid white;
-  width: 70%;
+  width: 60%;
   padding: 20px;
   border-radius: 20px;
 `;
