@@ -56,8 +56,8 @@ export default function API() {
         <Title>API</Title>
       </TitleTab>
       <MethodBox>
-        <APITitle>강의 평점 등록</APITitle>
-        <APIExplain>강의의 평점을 등록합니다.</APIExplain>
+        <APITitle>강좌 평점 등록</APITitle>
+        <APIExplain>강좌의 평점을 등록합니다.</APIExplain>
         <Box>
           <APIHttp>POST</APIHttp>
           <APIExplain>/front/course/{"{courseId}"}/rating</APIExplain>
@@ -66,7 +66,339 @@ export default function API() {
       </MethodBox>
       {/* // 메소드 박스에 내용을 적어 // 내가 적은 내용만 일단 적어 코드 부분은
       contentbox인데 어떻게 적어야할지 몰라서 일단 저렇게 나둬놓을게 */}
-      <Table>
+
+      <MethodBox>
+        <APITitle>강의 목록 조회</APITitle>
+        <APIExplain>강의 목록을 조회합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>/front/course/{"{courseId}"}/unit</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 이동</APITitle>
+        <APIExplain>unitId에 해당하는 강의로 이동합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 영상 재생</APITitle>
+        <APIExplain>강의 영상을 재생합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/play
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>질문 등록</APITitle>
+        <APIExplain>유닛의 질문을 등록합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>질문 조회</APITitle>
+        <APIExplain>유닛의 질문의 목록을 조회합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>질문 수정</APITitle>
+        <APIExplain>유닛의 질문을 수정합니다.</APIExplain>
+        <Box>
+          <APIHttp>PATCH</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question/
+            {"{questionId}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>질문 삭제</APITitle>
+        <APIExplain>유닛의 질문을 삭제합니다.</APIExplain>
+        <Box>
+          <APIHttp>DELETE</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question/
+            {"{questionId}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>답변 목록 조회</APITitle>
+        <APIExplain>질문에 대한 답변 목록을 조회합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question/reply/
+            {"{replyID}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>답변 수정</APITitle>
+        <APIExplain>질문에 대한 답변을 수정합니다.</APIExplain>
+        <Box>
+          <APIHttp>PATCH</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question/reply/
+            {"{replyID}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>답변 삭제</APITitle>
+        <APIExplain>질문에 대한 답변을 삭제합니다.</APIExplain>
+        <Box>
+          <APIHttp>DELETE</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question/reply/
+            {"{replyID}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>답변 등록</APITitle>
+        <APIExplain>질문에 대한 답변을 등록합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>
+            /front/course/{"{courseId}"}/unit/{"{unitId}"}/question/
+            {"{questionId}"}/reply
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>로그인</APITitle>
+        <APIExplain>로그인합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/auth/login</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>로그아웃</APITitle>
+        <APIExplain>로그아웃합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/auth/logout</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>재발급</APITitle>
+        <APIExplain>토큰을 재발급합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/auth/reissue</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>회원가입</APITitle>
+        <APIExplain>회원가입합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/auth/signup</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강좌 개설</APITitle>
+        <APIExplain>강좌를 개설합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/course</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>수강 취소</APITitle>
+        <APIExplain>courseId에 해당하는 강좌를 수강 취소합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/course/cancel</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>수강 신청</APITitle>
+        <APIExplain>courseId에 해당하는 강좌를 수강 신청합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/course/register</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강좌 정보 조회</APITitle>
+        <APIExplain>courseId에 해당하는 강좌 정보를 조회합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강좌 정보 수정</APITitle>
+        <APIExplain>courseId에 해당하는 강좌 정보를 수정합니다.</APIExplain>
+        <Box>
+          <APIHttp>PATCH</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강좌 삭제</APITitle>
+        <APIExplain>courseId에 해당하는 강좌를 삭제합니다.</APIExplain>
+        <Box>
+          <APIHttp>DELETE</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강좌 진척도 조회</APITitle>
+        <APIExplain>
+          courseId에 해당하는 강좌의 나의 진척도를 조회합니다.
+        </APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}/advance</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강좌 평점 조회</APITitle>
+        <APIExplain>courseId에 해당하는 강좌의 평점을 조회합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}/rating</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>플레이어 종료</APITitle>
+        <APIExplain>플레이어를 종료합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/player/off</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>플레이어 재생</APITitle>
+        <APIExplain>플레이어를 재생합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/player/on</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 등록</APITitle>
+        <APIExplain>강의를 등록합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}/unit</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 등록</APITitle>
+        <APIExplain>강의를 등록합니다.</APIExplain>
+        <Box>
+          <APIHttp>POST</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}/unit</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 정보 조회</APITitle>
+        <APIExplain>unitId에 해당하는 강의 정보를 조회합니다.</APIExplain>
+        <Box>
+          <APIHttp>GET</APIHttp>
+          <APIExplain>/open/course/{"{courseId}"}/unit</APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 수정</APITitle>
+        <APIExplain>unitId에 해당하는 강의를 수정합니다.</APIExplain>
+        <Box>
+          <APIHttp>PATCH</APIHttp>
+          <APIExplain>
+            /open/course/{"{courseId}"}/unit/{"{unitId}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+
+      <MethodBox>
+        <APITitle>강의 삭제</APITitle>
+        <APIExplain>unitId에 해당하는 강의를 삭제합니다.</APIExplain>
+        <Box>
+          <APIHttp>DELETE</APIHttp>
+          <APIExplain>
+            /open/course/{"{courseId}"}/unit/{"{unitId}"}
+          </APIExplain>
+        </Box>
+        <ContentBox>...</ContentBox>
+      </MethodBox>
+      {/* <Table>
         <table border="1">
           <th>대분류</th>
           <th>소분류</th>
@@ -314,7 +646,7 @@ export default function API() {
             <td>unitId에 해당하는 강의를 삭제합니다.</td>
           </tr>
         </table>
-      </Table>
+      </Table> */}
     </Wrapper>
   );
 }
