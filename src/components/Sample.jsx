@@ -397,6 +397,8 @@ export default function API() {
         </Box>
         <ContentBox>...</ContentBox>
       </MethodBox>
+      <br />
+      <br />
       {/* <Table>
         <table border="1">
           <th>대분류</th>
