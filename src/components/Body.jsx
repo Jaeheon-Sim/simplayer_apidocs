@@ -6,10 +6,9 @@ import Contact from "./Contact";
 import { MenuAtom } from "../atom";
 const Div = styled.div``;
 const BodyWrapper = styled(Div)`
-  padding-top: 0px;
-  padding-left: 170px;
   color: #fbfbfd;
   width: 100%;
+  padding-left: 50px;
 `;
 
 export default function Body() {

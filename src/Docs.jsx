@@ -4,19 +4,24 @@ import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
 `;
 const BodyBox = styled.div`
-  display: flex;
+  display: grid;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  padding-left: 126px;
+  padding-bottom: 20px;
 `;
 export default function Docs() {
   return (
     <Wrapper>
-      <Header />
+      <SideBar />
       <BodyBox>
-        <SideBar />
+        <Header />
         <Body />
       </BodyBox>
     </Wrapper>
