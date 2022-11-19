@@ -40,24 +40,11 @@ const APIHttp = styled.h3`
   color: #eaf700aa;
   margin-right: 20px;
 `;
-const Table = styled.table`
-  color: white;
-`;
+
 const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`;
-
-const ContentBox2 = styled.div`
-  width: auto;
-  border-radius: 10px;
-  background-color: #f5f7f9;
-  /* clear: both;
-  float: left; */
-  display: inline-block;
-  padding: 10px;
-  margin-top: 20px;
 `;
 
 export default function API() {
@@ -78,10 +65,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>account</td>
               <td>string</td>
@@ -114,10 +107,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Header
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>X-AUTH-TOKEN</td>
               <td>string</td>
@@ -146,10 +145,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>accessToken</td>
               <td>string</td>
@@ -183,10 +188,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>account</td>
               <td>string</td>
@@ -218,10 +229,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Header
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>X-AUTH-TOKEN</td>
               <td>string</td>
@@ -229,12 +246,12 @@ export default function API() {
             </tr>
             <tr>
               <td>subtitle</td>
-              <td>string</td>
+              <td>query</td>
               <td>등록할 강좌의 부제목</td>
             </tr>
             <tr>
               <td>title</td>
-              <td>string</td>
+              <td>query</td>
               <td>등록할 강좌의 제목</td>
             </tr>
           </table>
@@ -256,10 +273,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Header
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>X-AUTH-TOKEN</td>
               <td>string</td>
@@ -268,10 +291,16 @@ export default function API() {
           </table>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>courseId</td>
               <td>string</td>
@@ -296,10 +325,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Header
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>X-AUTH-TOKEN</td>
               <td>string</td>
@@ -308,10 +343,16 @@ export default function API() {
           </table>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>courseId</td>
               <td>string</td>
@@ -336,10 +377,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Path
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>courseId</td>
               <td>string</td>
@@ -364,10 +411,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Path
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>courseId</td>
               <td>string</td>
@@ -376,10 +429,16 @@ export default function API() {
           </table>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>subtitle</td>
               <td>string</td>
@@ -409,10 +468,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Path
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>courseId</td>
               <td>string</td>
@@ -447,10 +512,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Header
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>X-AUTH-TOKEN</td>
               <td>string</td>
@@ -459,10 +530,16 @@ export default function API() {
           </table>
           <br />
           Path
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>unitId</td>
               <td>int</td>
@@ -487,10 +564,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Header
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>X-AUTH-TOKEN</td>
               <td>string</td>
@@ -499,10 +582,16 @@ export default function API() {
           </table>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>time</td>
               <td>double</td>
@@ -537,10 +626,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>userId</td>
               <td>string</td>
@@ -567,10 +662,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>file</td>
               <td>string($binary)</td>
@@ -607,10 +708,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Path
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>courseId</td>
               <td>int</td>
@@ -637,10 +744,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Body
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>title</td>
               <td>string</td>
@@ -670,10 +783,16 @@ export default function API() {
           <b>Request parameters</b>
           <br />
           Path
-          <table border="1">
-            <th>Parameter</th>
-            <th>Type</th>
-            <th>Description</th>
+          <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
+            <th align="left">Parameter</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
             <tr>
               <td>unitId</td>
               <td>int</td>
@@ -689,7 +808,13 @@ export default function API() {
       <br />
       <br />
       {/* <Table>
-        <table border="1">
+                  <table
+            border="1"
+            width="500"
+            cellpadding="10"
+            cellspacing="0"
+            align="center"
+          >
           <th>대분류</th>
           <th>소분류</th>
           <th>URI</th>
