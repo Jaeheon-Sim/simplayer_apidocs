@@ -91,6 +91,8 @@ export default function Tutorial() {
         학습자는 등록된 강의 평점을 통해 자신이 원하는 강의를 선별할 수
         있습니다.
       </div>
+      <br />
+      <br />
     </Wrapper>
   );
 }
