@@ -245,13 +245,13 @@ export default function API() {
               <td>액세스 토큰</td>
             </tr>
             <tr>
-              <td>subtitle</td>
-              <td>query</td>
+              <td>subtitle (query)</td>
+              <td>string</td>
               <td>등록할 강좌의 부제목</td>
             </tr>
             <tr>
-              <td>title</td>
-              <td>query</td>
+              <td>title (query)</td>
+              <td>string</td>
               <td>등록할 강좌의 제목</td>
             </tr>
           </table>
@@ -396,7 +396,27 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 강좌 정보 조회 성공
+          200: 강좌 정보 조회 성공 <br />
+          <code>
+            {"{"} <br />
+            &nbsp;"courseId": int, <br />
+            &nbsp;"title": string, <br />
+            &nbsp;"subtitle": string, <br />
+            &nbsp;"instructor": string, <br />
+            &nbsp;"rating": int, <br />
+            &nbsp;"unitList": [] <br />
+            {"}"}
+          </code>{" "}
+          <br />
+          courseId: 강의 아이디 <br />
+          title: 강의 제목 <br />
+          subtitle: 강의 부제목
+          <br />
+          instructor: 강사 <br />
+          rating: 강의 평점 <br />
+          unitList: 강좌 내 강의들의 리스트
+          <br /> <br />
+          404: 해당 강좌를 찾을 수 없음
         </ContentBox>
       </MethodBox>
 
@@ -453,7 +473,8 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 강좌 수정 성공
+          200: 강좌 수정 성공 <br />
+          404: 해당 강좌를 찾을 수 없음
         </ContentBox>
       </MethodBox>
 
@@ -485,7 +506,9 @@ export default function API() {
             </tr>
           </table>
           <br />
-          200: 강좌 삭제 성공
+          <b>Response</b> <br />
+          200: 강좌 삭제 성공 <br />
+          404: 해당 강좌를 찾을 수 없음
         </ContentBox>
       </MethodBox>
 
@@ -506,7 +529,7 @@ export default function API() {
         <APIExplain>courseId에 해당하는 강좌의 평점을 조회합니다.</APIExplain>
         <Box>
           <APIHttp>GET</APIHttp>
-          <APIExplain>/open/course/{"{courseId}"}/rating</APIExplain>
+          <APIExplain>/front/course/unit/{"{unitId}"}/rating</APIExplain>
         </Box>
         <ContentBox>
           <b>Request parameters</b>
@@ -549,7 +572,8 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 강좌 평점 조회 성공
+          200: 강좌 평점 조회 성공 <br />
+          404: 등록된 평점이 없음
         </ContentBox>
       </MethodBox>
 
@@ -558,7 +582,7 @@ export default function API() {
         <APIExplain>플레이어를 종료합니다.</APIExplain>
         <Box>
           <APIHttp>POST</APIHttp>
-          <APIExplain>/open/player/off</APIExplain>
+          <APIExplain>/front/player/off</APIExplain>
         </Box>
         <ContentBox>
           <b>Request parameters</b>
@@ -593,14 +617,19 @@ export default function API() {
             <th align="left">Type</th>
             <th align="left">Description</th>
             <tr>
+              <td>check</td>
+              <td>boolean</td>
+              <td></td>
+            </tr>
+            <tr>
               <td>time</td>
               <td>double</td>
-              <td>시청 시간</td>
+              <td>현재 재생 중인 강의의 시청 시간</td>
             </tr>
             <tr>
               <td>unitId</td>
               <td>int</td>
-              <td>유닛 아이디</td>
+              <td>강의 아이디</td>
             </tr>
             <tr>
               <td>userId</td>
@@ -611,16 +640,17 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 플레이어 종료 성공
+          200: 플레이어 종료 성공 <br />
+          404: 해당 강의를 찾을 수 없음
         </ContentBox>
       </MethodBox>
 
       <MethodBox>
-        <APITitle>플레이어 재생</APITitle>
-        <APIExplain>플레이어를 재생합니다.</APIExplain>
+        <APITitle>플레이어 시작</APITitle>
+        <APIExplain>플레이어를 시작합니다.</APIExplain>
         <Box>
           <APIHttp>POST</APIHttp>
-          <APIExplain>/open/player/on</APIExplain>
+          <APIExplain>/front/player/on</APIExplain>
         </Box>
         <ContentBox>
           <b>Request parameters</b>
@@ -645,15 +675,15 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 플레이어 재생 성공
+          200: 플레이어 재생 성공. userId에 해당하는 액세스 토큰 반환
           <br />
-          userId에 해당하는 액세스 토큰 반환
+          404: 해당 사용자를 찾을 수 없음
         </ContentBox>
       </MethodBox>
 
       <MethodBox>
-        <APITitle>강의 등록</APITitle>
-        <APIExplain>강의를 등록합니다.</APIExplain>
+        <APITitle>강의 업로드</APITitle>
+        <APIExplain>강의를 업로드합니다.</APIExplain>
         <Box>
           <APIHttp>POST</APIHttp>
           <APIExplain>/open/course/unit</APIExplain>
@@ -674,24 +704,20 @@ export default function API() {
             <th align="left">Description</th>
             <tr>
               <td>file</td>
-              <td>string($binary)</td>
+              <td>file</td>
               <td>업로드할 강의 영상 파일</td>
             </tr>
             <tr>
-              <td>courseId</td>
-              <td>int</td>
-              <td>등록할 강좌 아이디</td>
-            </tr>
-            <tr>
-              <td>title</td>
-              <td>string</td>
-              <td>등록할 강의 제목</td>
+              <td>unitRequestDto</td>
+              <td>object</td>
+              <td>courseId(int), title(string) 정보를 담고 있는 객체</td>
             </tr>
           </table>
           <br />
           <b>Response</b>
           <br />
-          200: 강의 등록 성공
+          200: 강의 등록 성공 <br />
+          404: 해당 강좌가 없음
         </ContentBox>
       </MethodBox>
 
@@ -721,15 +747,15 @@ export default function API() {
             <tr>
               <td>courseId</td>
               <td>int</td>
-              <td>조회할 강의 아이디</td>
+              <td>조회할 강좌의 아이디</td>
             </tr>
           </table>
           <br />
           <b>Response</b>
           <br />
-          200: 강의 정보 조회 성공
+          200: 강의 정보 조회 성공. unitId와 title의 리스트 반환 <br />
+          404: 해당 강좌가 없음
           <br />
-          unitId와 title 반환
         </ContentBox>
       </MethodBox>
 
@@ -768,7 +794,8 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 강의 수정 성공
+          200: 강의 수정 성공 <br />
+          404: 해당 강의가 없음
         </ContentBox>
       </MethodBox>
 
@@ -802,7 +829,8 @@ export default function API() {
           <br />
           <b>Response</b>
           <br />
-          200: 강의 삭제 성공
+          200: 강의 삭제 성공 <br />
+          404: 해당 강의가 없음
         </ContentBox>
       </MethodBox>
       <br />
