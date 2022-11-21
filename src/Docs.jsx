@@ -13,7 +13,7 @@ const BodyBox = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  padding-left: 126px;
+  padding-left: 6.1vw;
   padding-bottom: 20px;
 `;
 export default function Docs() {
