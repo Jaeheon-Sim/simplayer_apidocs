@@ -21,8 +21,12 @@ const ContentBox = styled.div`
   /* clear: both;
   float: left; */
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 const MethodBox = styled.div`
