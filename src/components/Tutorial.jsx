@@ -14,16 +14,16 @@ const TitleTab = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
-const ContentBox = styled.div`
-  width: auto;
-  border-radius: 10px;
-  background-color: #2c2c2c;
-  /* clear: both;
-  float: left; */
-  display: inline-block;
-  padding: 10px;
-  margin-top: 20px;
-`;
+// const ContentBox = styled.div`
+//   width: auto;
+//   border-radius: 10px;
+//   background-color: #2c2c2c;
+//   /* clear: both;
+//   float: left; */
+//   display: inline-block;
+//   padding: 10px;
+//   margin-top: 20px;
+// `;
 
 export default function Tutorial() {
   return (
