@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/simplayer_apidocs/static/css/main.c928c41c.css",
-    "main.js": "/simplayer_apidocs/static/js/main.c6df1b59.js",
+    "main.css": "/simplayer_apidocs/static/css/main.a6ead347.css",
+    "main.js": "/simplayer_apidocs/static/js/main.91658e01.js",
     "index.html": "/simplayer_apidocs/index.html",
-    "main.c928c41c.css.map": "/simplayer_apidocs/static/css/main.c928c41c.css.map",
-    "main.c6df1b59.js.map": "/simplayer_apidocs/static/js/main.c6df1b59.js.map"
+    "main.a6ead347.css.map": "/simplayer_apidocs/static/css/main.a6ead347.css.map",
+    "main.91658e01.js.map": "/simplayer_apidocs/static/js/main.91658e01.js.map"
   },
   "entrypoints": [
-    "static/css/main.c928c41c.css",
-    "static/js/main.c6df1b59.js"
+    "static/css/main.a6ead347.css",
+    "static/js/main.91658e01.js"
   ]
 }
