@@ -7,9 +7,9 @@ const Div = styled.div`
 `;
 
 const Head = styled(Div)`
-  height: 60px;
-
-  color: white;
+  height: 8vh;
+  background-color: #e6e5e5;
+  color: black;
   box-shadow: 0 1px 1px 0px;
   justify-content: flex-start;
 `;
@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       <Head>
-        <HeadTab>Sim Player Docs</HeadTab>
+        <HeadTab>Sim Player API Docs</HeadTab>
       </Head>
     </>
   );
