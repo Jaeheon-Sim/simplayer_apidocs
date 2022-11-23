@@ -17,6 +17,7 @@ const NavBar = styled(Div)`
   border-right: 1px solid black;
   flex-shrink: 0;
   font-weight: bolder;
+  font-size: 1.3rem;
 `;
 
 const NavTab = styled(Div)`

@@ -16,7 +16,7 @@ const Head = styled(Div)`
 
 const HeadTab = styled(Div)`
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 3rem;
   margin-left: 20px;
   margin-top: -3px;
 `;

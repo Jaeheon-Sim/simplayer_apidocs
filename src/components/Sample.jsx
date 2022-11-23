@@ -28,10 +28,10 @@ const ContentBox = styled.div`
 `;
 
 const MethodBox = styled.div`
-  margin-bottom: 25px;
-  border: 1px solid white;
+  margin-bottom: 4vh;
+  border: 1px solid black;
   width: 60%;
-  padding: 20px;
+  padding: 3vh;
   border-radius: 20px;
 `;
 
