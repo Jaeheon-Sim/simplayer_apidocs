@@ -15,11 +15,9 @@ const TitleTab = styled.div`
   justify-content: flex-start;
 `;
 const ContentBox = styled.div`
-  width: auto;
+  min-width: 10vw;
   border-radius: 10px;
-  background-color: #2c2c2c;
-  /* clear: both;
-  float: left; */
+  background-color: #dad9d9;
   display: inline-block;
   padding: 20px;
   margin-top: 20px;
@@ -38,17 +36,25 @@ const MethodBox = styled.div`
 `;
 
 const APITitle = styled.h2``;
-
 const APIExplain = styled.p``;
 const APIHttp = styled.h3`
-  color: #eaf700aa;
+  color: #041cf5;
   margin-right: 20px;
+`;
+
+const ContentTab = styled.div`
+  padding-left: 30px;
+  margin-bottom: 20px;
 `;
 
 const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+`;
+
+const Table = styled.table`
+  margin: 50px 10px 0px 10px;
 `;
 
 export default function API() {
@@ -60,19 +66,24 @@ export default function API() {
 
       <MethodBox>
         <APITitle>로그인</APITitle>
-        <APIExplain>
-          로그인합니다. 클라이언트에서 '플레이어 시작' API를 호출하기 전에
-          호출되어야 합니다.
-          <br />
-          호출 성공 시, 액세스 토큰과 리프레시 토큰값을 반환합니다.
-        </APIExplain>
+        <ContentTab>
+          <div>
+            로그인합니다. 클라이언트에서 '플레이어 시작' API를 호출하기 전에
+            호출되어야 합니다.
+            <br />
+            호출 성공 시, 액세스 토큰과 리프레시 토큰값을 반환합니다.
+          </div>
+        </ContentTab>
         <Box>
           <APIHttp>POST</APIHttp>
           <APIExplain>/open/auth/login</APIExplain>
         </Box>
         <ContentBox>
           <b>Request parameters</b>
+          <br />
           Body
+          <br />
+          <br />
           <table border="1" width="500" cellpadding="10" cellspacing="0">
             <th align="left">Parameter</th>
             <th align="left">Type</th>
@@ -90,6 +101,7 @@ export default function API() {
           </table>
           <br />
           <b>Response</b>
+          <br />
           200: 로그인 성공.
           <ul>
             <li>Access Token [accessToken:String]</li>

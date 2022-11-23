@@ -11,7 +11,7 @@ const Div = styled.div`
 const NavBar = styled(Div)`
   position: fixed;
   margin-top: 2px;
-  min-width: 6vw;
+  width: 7vw;
   flex-direction: column;
   height: 100%;
   border-right: 1px solid black;
@@ -27,7 +27,7 @@ const NavTab = styled(Div)`
   justify-content: center;
   height: 75px;
   &:hover {
-    background-color: #636363;
+    background-color: #dad9d9;
   }
   color: ${(props) =>
     props.path === props.now ? "rgb(0, 0, 0)" : null}; //props 활용
