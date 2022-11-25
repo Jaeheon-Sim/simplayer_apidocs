@@ -19,6 +19,7 @@ const HeadTab = styled(Div)`
   font-size: 3rem;
   margin-left: 20px;
   margin-top: -3px;
+  white-space: nowrap;
 `;
 
 export default function Header() {

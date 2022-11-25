@@ -15,9 +15,12 @@ const TitleTab = styled.div`
   justify-content: flex-start;
 `;
 const ContentBox = styled.div`
+  overflow-x: auto;
+  overflow-y: auto;
   min-width: 10vw;
   border-radius: 10px;
   background-color: #dad9d9;
+  flex-shrink: 0;
   display: inline-block;
   padding: 20px;
   margin-top: 20px;
@@ -28,11 +31,16 @@ const ContentBox = styled.div`
 `;
 
 const MethodBox = styled.div`
-  margin-bottom: 4vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-bottom: 10vh;
   border: 1px solid black;
   width: 60%;
   padding: 3vh;
   border-radius: 20px;
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
 `;
 
 const APITitle = styled.h2``;
@@ -81,6 +89,7 @@ const Table = styled.table`
 const MyDiv = styled.div`
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 15px;
 `;
 
 export default function API() {
