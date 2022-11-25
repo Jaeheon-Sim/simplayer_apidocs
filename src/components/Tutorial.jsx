@@ -14,6 +14,7 @@ const TitleTab = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
+
 // const ContentBox = styled.div`
 //   width: auto;
 //   border-radius: 10px;
@@ -31,6 +32,7 @@ export default function Tutorial() {
       <TitleTab>
         <Title>Tutorial</Title>
       </TitleTab>
+
       <div>
         Sim Player는 사용자 편의성과 보안성이 강화된 웹 미디어 플레이어입니다.
       </div>
