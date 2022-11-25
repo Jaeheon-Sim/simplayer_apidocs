@@ -1198,7 +1198,7 @@ export default function API() {
             <th align="left">Description</th>
             <tr>
               <td>account</td>
-              <td>int</td>
+              <td>string</td>
               <td>조회할 회원의 계정 아이디</td>
             </tr>
           </table>
