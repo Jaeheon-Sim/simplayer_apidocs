@@ -22,6 +22,7 @@ const NavBar = styled(Div)`
   @media (max-width: 1000px) {
     font-size: 0.5rem;
   }
+  z-index:15;
 `;
 
 const NavTab = styled(Div)`
