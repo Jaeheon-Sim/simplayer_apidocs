@@ -14,6 +14,7 @@ const BodyBox = styled.div`
   min-height: 100vh;
   padding-left: 7.1vw;
   padding-bottom: 20px;
+  overflow-x: hidden;
 `;
 
 const Sticky = styled.div`

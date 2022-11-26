@@ -20,9 +20,10 @@ const NavBar = styled(Div)`
   font-size: 1.3rem;
   flex: 1;
   @media (max-width: 1000px) {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+    width: 50px;
   }
-  z-index:15;
+  z-index: 2;
 `;
 
 const NavTab = styled(Div)`

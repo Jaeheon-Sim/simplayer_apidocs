@@ -5,7 +5,7 @@ const Div = styled.div``;
 const Wrapper = styled(Div)``;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 3rem;
   padding: 0 10px 1px 5px;
   border-bottom: 1.5px solid rgb(183, 185, 187);
 `;
@@ -87,7 +87,7 @@ const Table = styled.table`
 `;
 
 const MyDiv = styled.div`
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 15px;
 `;
