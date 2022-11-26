@@ -15,6 +15,9 @@ const BodyBox = styled.div`
   padding-left: 7.1vw;
   padding-bottom: 20px;
   overflow-x: hidden;
+  @media (max-width: 1000px) {
+    padding-left: 51px;
+  }
 `;
 
 const Sticky = styled.div`
