@@ -18,6 +18,12 @@ const NavBar = styled(Div)`
   flex-shrink: 0;
   font-weight: bolder;
   font-size: 1.3rem;
+  flex: 1;
+  @media (max-width: 1000px) {
+    font-size: 0.8rem;
+    width: 50px;
+  }
+  z-index: 2;
 `;
 
 const NavTab = styled(Div)`

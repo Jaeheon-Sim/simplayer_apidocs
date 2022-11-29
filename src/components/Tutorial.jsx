@@ -5,7 +5,7 @@ const Div = styled.div``;
 const Wrapper = styled(Div)``;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 3rem;
   padding: 0 10px 1px 5px;
   border-bottom: 1.5px solid rgb(183, 185, 187);
 `;
@@ -54,7 +54,7 @@ export default function Tutorial() {
 
       <h2>시간대별 질문/답변 기능</h2>
       <img
-        src="img/feature1_question.png"
+        src="img/img001_question.png"
         width="70%"
         height="70%"
         alt="feature1"
@@ -69,7 +69,7 @@ export default function Tutorial() {
 
       <h2>중복 로그인 제어</h2>
       <img
-        src="img/feature2_loginControl.png"
+        src="img/img002_loginControl.png"
         width="70%"
         height="70%"
         alt="feature2"
@@ -82,7 +82,7 @@ export default function Tutorial() {
 
       <h2>강의 평가 기능</h2>
       <img
-        src="img/feature3_evaluation.png"
+        src="img/img003_evaluation.png"
         width="70%"
         height="70%"
         alt="feature3"

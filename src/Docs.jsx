@@ -11,17 +11,27 @@ const Wrapper = styled.div`
 const BodyBox = styled.div`
   display: grid;
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
   padding-left: 7.1vw;
   padding-bottom: 20px;
+  overflow-x: hidden;
+  @media (max-width: 1000px) {
+    padding-left: 51px;
+  }
+`;
+
+const Sticky = styled.div`
+  position: sticky;
+  top: 0;
 `;
 export default function Docs() {
   return (
     <Wrapper>
       <SideBar />
       <BodyBox>
-        <Header />
+        <Sticky>
+          <Header />
+        </Sticky>
         <Body />
       </BodyBox>
     </Wrapper>

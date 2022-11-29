@@ -5,7 +5,7 @@ const Div = styled.div``;
 const Wrapper = styled(Div)``;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 3rem;
   padding: 0 10px 1px 5px;
   border-bottom: 1.5px solid rgb(183, 185, 187);
 `;
@@ -15,9 +15,12 @@ const TitleTab = styled.div`
   justify-content: flex-start;
 `;
 const ContentBox = styled.div`
+  overflow-x: auto;
+  overflow-y: auto;
   min-width: 10vw;
   border-radius: 10px;
   background-color: #dad9d9;
+  flex-shrink: 0;
   display: inline-block;
   padding: 20px;
   margin-top: 20px;
@@ -28,19 +31,24 @@ const ContentBox = styled.div`
 `;
 
 const MethodBox = styled.div`
-  margin-bottom: 4vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-bottom: 10vh;
   border: 1px solid black;
   width: 60%;
   padding: 3vh;
   border-radius: 20px;
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
 `;
 
 const APITitle = styled.h2``;
 const APIExplain = styled.p``;
-const APIHttp = styled.h3`
-  color: #041cf5;
-  margin-right: 20px;
-`;
+// const APIHttp = styled.h3`
+//   color: #041cf5;
+//   margin-right: 20px;
+// `;
 
 const APIPost = styled.h3`
   color: #008847;
@@ -74,13 +82,14 @@ const Box = styled.div`
   justify-content: flex-start;
 `;
 
-const Table = styled.table`
-  margin: 50px 10px 0px 10px;
-`;
+// const Table = styled.table`
+//   margin: 50px 10px 0px 10px;
+// `;
 
 const MyDiv = styled.div`
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
+  margin-bottom: 15px;
 `;
 
 export default function API() {
@@ -1198,7 +1207,7 @@ export default function API() {
             <th align="left">Description</th>
             <tr>
               <td>account</td>
-              <td>int</td>
+              <td>string</td>
               <td>조회할 회원의 계정 아이디</td>
             </tr>
           </table>

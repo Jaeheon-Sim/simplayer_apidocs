@@ -12,6 +12,7 @@ const Head = styled(Div)`
   color: black;
   box-shadow: 0 1px 1px 0px;
   justify-content: flex-start;
+  z-index: 100;
 `;
 
 const HeadTab = styled(Div)`
@@ -19,6 +20,7 @@ const HeadTab = styled(Div)`
   font-size: 3rem;
   margin-left: 20px;
   margin-top: -3px;
+  white-space: nowrap;
 `;
 
 export default function Header() {
