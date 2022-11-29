@@ -45,10 +45,10 @@ const MethodBox = styled.div`
 
 const APITitle = styled.h2``;
 const APIExplain = styled.p``;
-const APIHttp = styled.h3`
-  color: #041cf5;
-  margin-right: 20px;
-`;
+// const APIHttp = styled.h3`
+//   color: #041cf5;
+//   margin-right: 20px;
+// `;
 
 const APIPost = styled.h3`
   color: #008847;
@@ -82,9 +82,9 @@ const Box = styled.div`
   justify-content: flex-start;
 `;
 
-const Table = styled.table`
-  margin: 50px 10px 0px 10px;
-`;
+// const Table = styled.table`
+//   margin: 50px 10px 0px 10px;
+// `;
 
 const MyDiv = styled.div`
   font-size: 1.3rem;
